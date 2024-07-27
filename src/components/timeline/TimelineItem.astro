@@ -1,0 +1,25 @@
+---
+interface Props {
+    title: string;
+    year: string;
+}
+
+const { title, year } = Astro.props;
+---
+
+<div class="flex items-stretch">
+    <div class="relative w-full shrink-0">
+        <div class="absolute left-4 h-full w-0.5 bg-slate-500"></div>
+        <div class="pt-2">
+            <div class="flex flex-row items-center">
+                <p
+                    class="z-10 my-0 text-nowrap rounded-full border border-blue-500 bg-white px-2 py-0.5 text-sm dark:bg-black"
+                >
+                    {year}
+                </p>
+                <h2 class="ml-2 text-lg font-bold">{title}</h2>
+            </div>
+        </div>
+        <p class="pl-4 pt-2 text-base"><slot /></p>
+    </div>
+</div>

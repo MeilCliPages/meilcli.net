@@ -1,0 +1,30 @@
+---
+interface Props {
+    url: string;
+    text: string;
+}
+
+const { url, text } = Astro.props;
+const isActive = Astro.url.pathname == url;
+---
+
+{
+    isActive && (
+        <a
+            class="grow border-b-4 border-indigo-500 py-4 text-center text-2xl text-blue-500 hover:no-underline"
+            href={url}
+        >
+            {text}
+        </a>
+    )
+}
+{
+    isActive == false && (
+        <a
+            class="grow border-b-4 border-transparent py-4 text-center text-2xl text-black hover:no-underline dark:text-white"
+            href={url}
+        >
+            {text}
+        </a>
+    )
+}

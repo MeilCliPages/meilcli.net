@@ -1,0 +1,39 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Tab from "../components/Tab.astro";
+import { siteTitle, siteDescription } from "../constant";
+import TopLink from "../components/TopLink.astro";
+---
+
+<Layout title={siteTitle} description={siteDescription}>
+    <Tab />
+    <div class="my-4">
+        <p class="pt-8 text-center text-4xl">ようこそ!</p>
+        <p class="pb-8 text-center text-2xl">このサイトはMeilCliの様々な製作物や経歴などなどをまとめておくところです</p>
+        <TopLink
+            url="https://twitter.com/penguin_sharp"
+            title="Twitter"
+            description="てきとーなことつぶやいてます"
+            icon="Twitter"
+        />
+        <TopLink url="https://github.com/MeilCli" title="GitHub" description="OSSとか作ってます" icon="GitHub" />
+        <TopLink
+            url="https://blog.meilcli.net/"
+            title="ブログ"
+            description="主に技術系の記事を書いているブログ"
+            icon="Blog"
+        />
+        <TopLink
+            url="https://qiita.com/MeilCli"
+            title="Qiita"
+            description="昔書いた技術系の記事があります"
+            icon="Qiita"
+        />
+        <TopLink
+            url="https://penguin.photos/"
+            title="penguin.photo"
+            description="今までに撮影したペンギンの画像集です"
+            icon="Photo"
+        />
+    </div>
+</Layout>

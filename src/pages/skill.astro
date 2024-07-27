@@ -1,0 +1,35 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Tab from "../components/Tab.astro";
+import SkillBar from "../components/SkillBar.astro";
+import { siteTitle, siteDescription } from "../constant";
+---
+
+<Layout title={siteTitle} description={siteDescription}>
+    <Tab />
+
+    <div class="my-4 flex flex-col gap-y-2">
+        <SkillBar name="C#" percentage={100} color="blue" />
+        <SkillBar name="Kotlin" percentage={100} color="blue" />
+        <SkillBar name="Android" percentage={100} color="green" />
+        <SkillBar name=".NET Standard" percentage={90} color="green" />
+        <SkillBar name="Gradle" percentage={90} color="green" />
+        <SkillBar name="TypeScript" percentage={80} color="blue" />
+        <SkillBar name="Node.js" percentage={80} color="green" />
+        <SkillBar name="Java" percentage={80} color="blue" />
+        <SkillBar name="JVM" percentage={80} color="green" />
+        <SkillBar name=".NET" percentage={70} color="green" />
+        <SkillBar name="GitHub Actions" percentage={70} color="green" />
+        <SkillBar name="Groovy" percentage={60} color="blue" />
+        <SkillBar name="Angular" percentage={60} color="green" />
+        <SkillBar name="Astro" percentage={60} color="green" />
+        <SkillBar name="Go" percentage={40} color="blue" />
+        <SkillBar name="Ruby" percentage={30} color="blue" />
+        <SkillBar name="Crystal" percentage={30} color="blue" />
+        <SkillBar name="Swift" percentage={30} color="blue" />
+        <SkillBar name="Ruby on Rails" percentage={30} color="green" />
+        <SkillBar name="Azure Pipelines" percentage={30} color="green" />
+        <SkillBar name="PHP" percentage={20} color="blue" />
+        <SkillBar name="F#" percentage={20} color="blue" />
+    </div>
+</Layout>

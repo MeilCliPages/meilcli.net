@@ -1,0 +1,57 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Tab from "../components/Tab.astro";
+import Timeline from "../components/timeline/Timeline.astro";
+import TimelineItem from "../components/timeline/TimelineItem.astro";
+import TimelineEdge from "../components/timeline/TimelineEdge.astro";
+import { siteTitle, siteDescription } from "../constant";
+---
+
+<Layout title={siteTitle} description={siteDescription}>
+    <Tab />
+
+    <Timeline>
+        <TimelineEdge edge="2011" />
+        <TimelineItem year="2011 - 2012" title="プログラミングとの出会い">
+            Twitterのフォロワーに勧められてPHPでTwitterのツールを作り始めたのがプログラミングとの出会い
+        </TimelineItem>
+        <TimelineItem year="2012 -" title="アプリを作り始める">
+            自分のスマホで動くアプリを作りたくなり、当時持っていたスマホがAndroidだったためAndroidアプリを作り始める
+        </TimelineItem>
+        <TimelineItem year="2013 -" title="C#との出会い">
+            Windowsアプリも作ってみたいなぁと思っていた頃にTwitterのフォロワーのGitHubアカウントを眺めていたらC#と運命的な出会いを果たす
+        </TimelineItem>
+        <TimelineItem year="2014 - 2018" title="大学生活">
+            私立の某情報系学部に進学したものの、大学では情報科学の基礎のみを学ぶことになる
+            <br />
+            この頃になると自作ライブラリーを公開しては飽きて他のを作り直すというのを繰り返す
+        </TimelineItem>
+        <TimelineItem year="2015 - 2016" title="Kotlinを使い始める">
+            この頃はC#にどっぷりハマっていた一方で作りたかったのはAndroidアプリだった。ちょうどそのときにC#の影響を受けたKotlinがAndroid界隈で噂になり始めたのでKotlinを使い始める
+        </TimelineItem>
+        <TimelineItem year="2016 - 2018" title="Xamarin.Androidを使い始める">
+            Xamarinがマイクロソフトの手によって個人向け無償化したことにより、自分の中でのKotlinの時代が終了。その後C#でAndroidアプリ開発をすることになる
+            <br />
+            しかしAndroidがApp Bundleの時代になると、さすがにXamarin.Androidだとつらいと感じ始める。もう一度Kotlinへ
+        </TimelineItem>
+        <TimelineItem year="2017 - 2018" title="アプリ開発のバイト">
+            内定先でアプリ開発のバイトをした。このときは主にJavaでAndroidアプリの改修をしていた
+        </TimelineItem>
+        <TimelineItem year="2018 - 2020" title="Fenrir Inc.">
+            アプリ開発のバイトしてたところに就職。AndroidエンジニアとしてKotlinを使ってアプリ開発を行っていたり、たまにC#/Xamarin.Androidを使って開発もする
+        </TimelineItem>
+        <TimelineItem year="2018 -" title="CI/CDエンジニアへ">
+            旧VSTSがAzure DevOpsへの改名とともにAzure
+            PipelinesがOSS向けに無料枠をふんだんに開放したことを受けて本格的にCI/CDデビューをする
+            <br />
+            2019年夏にGitHub ActionsのバージョンアップでAzure Pipelinesのクローン版になったためGitHub Actionsを使い始める。そしてactionを作るのにハマる
+        </TimelineItem>
+        <TimelineItem year="2020 - 2022" title="dely株式会社">
+            自社サービスの開発をしてみたくなり転職。AndroidエンジニアをしながらCI/CDの整備などをする
+        </TimelineItem>
+        <TimelineItem year="2022 -" title="某メガベンチャー">
+            フルリモートで働いてみたくなり転職。相変わらずAndroidエンジニアをしている
+        </TimelineItem>
+        <TimelineEdge edge="Today" />
+    </Timeline>
+</Layout>

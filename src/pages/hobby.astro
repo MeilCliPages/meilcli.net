@@ -1,0 +1,46 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Tab from "../components/Tab.astro";
+import { siteTitle, siteDescription } from "../constant";
+---
+
+<Layout title={siteTitle} description={siteDescription}>
+    <Tab />
+    <div class="markdown-body py-2">
+        <h2 class="text-xl">プライベートでやってること</h2>
+        <ul>
+            <li>プログラミング</li>
+            <li>Apex</li>
+            <li>YouTube観賞</li>
+            <li>アニメ・映画観賞</li>
+            <li>株式投資・投機</li>
+        </ul>
+        <h2 class="text-xl">プログラミング</h2>
+        <ul>
+            <li>GitHub Action作成</li>
+            <li>ブログ作成</li>
+        </ul>
+        <h2 class="text-xl">Apex</h2>
+        <ul>
+            <li>主にランク(プラチナダイヤぐらい)</li>
+            <li>ライフライン・ホライゾン</li>
+        </ul>
+        <h2 class="text-xl">YouTube鑑賞</h2>
+        <ul>
+            <li>雑学系</li>
+            <li>ゲーム実況</li>
+        </ul>
+        <h2 class="text-xl">アニメ鑑賞</h2>
+        <ul>
+            <li>ストーリー面白いやつ</li>
+            <li>SF系とか</li>
+        </ul>
+        <h2 class="text-xl">株式投資・投機</h2>
+        <ul>
+            <li>アメリカ株</li>
+            <li>レバレッジかけたりショートしたり</li>
+            <li>チャート見てるだけでも楽しめる</li>
+            <li>もちろん分散・長期・積立投資もやってる</li>
+        </ul>
+    </div>
+</Layout>

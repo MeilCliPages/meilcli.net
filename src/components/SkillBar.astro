@@ -1,0 +1,26 @@
+---
+type Color = "blue" | "green";
+
+interface Props {
+    name: string;
+    percentage: number;
+    color: Color;
+}
+
+const { name, percentage, color } = Astro.props;
+---
+
+<div class="relative h-8 w-full">
+    <div
+        class="absolute h-full"
+        class:list={[color == "blue" ? "bg-blue-500" : "bg-green-500"]}
+        style={`width: ${percentage}%;`}
+    >
+    </div>
+    <div
+        class="absolute bottom-0 left-2 top-0 inline-flex items-center text-white"
+        class:list={[color == "blue" ? "bg-blue-500" : "bg-green-500"]}
+    >
+        {name}
+    </div>
+</div>
