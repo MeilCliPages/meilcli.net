@@ -5,7 +5,9 @@ interface Props {
 }
 
 const { url, text } = Astro.props;
-const isActive = Astro.url.pathname == url;
+const pathName = Astro.url.pathname;
+const tailningedPath = pathName[pathName.length - 1] == "/" ? pathName.substring(0, pathName.length - 1) : pathName;
+const isActive = tailningedPath == url;
 ---
 
 {
